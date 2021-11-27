@@ -19,7 +19,7 @@ export class Task {
     this.minutesExecutedThisWeek = minutesExecutedThisWeek;
   }
 
-  get suggestedMinutesPerDay() {
-    return Math.round(this.weeklyQuotaInMinutes / 7);
+  get missingMinutesThisWeek() {
+    return this.weeklyQuotaInMinutes - this.minutesExecutedThisWeek;
   }
 }

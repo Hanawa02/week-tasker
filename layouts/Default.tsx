@@ -15,7 +15,7 @@ const DefaultLayout = (props: DefaultLayoutProps) => {
         <View style={styles.menu}>
           <Text style={styles.menuTitle}>{props.title}</Text>
         </View>
-        <ScrollView style={styles.pageContainer}>{props.children}</ScrollView>
+        {props.children}
       </View>
     </View>
   );
@@ -48,8 +48,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 32,
     fontWeight: '600',
-  },
-  pageContainer: {
-    padding: '1.25rem',
   },
 });
